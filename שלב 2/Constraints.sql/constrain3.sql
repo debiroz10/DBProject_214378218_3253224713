@@ -1,0 +1,3 @@
+ALTER TABLE Designer
+MODIFY (Payment NUMERIC(5) DEFAULT 0);
+

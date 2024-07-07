@@ -1,0 +1,2 @@
+ALTER TABLE Package
+ADD CONSTRAINT CHK_Price CHECK (Price > 0);

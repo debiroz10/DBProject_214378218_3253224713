@@ -1,0 +1,8 @@
+SELECT AVG(i.FinalPrice) AS average_price
+FROM Invitation i
+JOIN Client c ON i.ClientId = c.ClientId
+JOIN Pakcage p ON i.PackageId = p.PackageId
+WHERE c.ClientName LIKE 'm%';
+
+
+
