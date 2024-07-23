@@ -1,0 +1,21 @@
+-- Modify Client table
+ALTER TABLE Client
+ADD COLUMN Address VARCHAR(30);
+
+-- Increase the size of the PhoneNumber column to accommodate larger values
+ALTER TABLE Client
+MODIFY  PhoneNumber VARCHAR(20);
+
+
+--הכנסת הערכים מהטבלהשלהם לטבלה שלנו 
+INSERT INTO Client (ClientId, ClientName, Phone, BirthDate, Address)
+SELECT custID, custName, custPhoneNumber, to_date('01/01/1990','dd/mm/yyyy'), custAddress FROM Customers
+WHERE custID NOT IN (SELECT ClientId FROM Client);
+
+
+
+
+select * from Client t
+
+
+
